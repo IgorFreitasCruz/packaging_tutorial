@@ -1,10 +1,10 @@
 [build-system]
-requires = ["hatchling >= 1.26"]
+requires = ["hatchling >= 1.26", "hatch-vcs >= 0.5"]
 build-backend = "hatchling.build"
 
 [project]
 name = "example_package_igor_cruz"
-version = "0.0.2"
+dynamic = ["version"]
 authors = [
   { name="Igor Cruz", email="igor.freitas.cruz@icloud.com" },
 ]
@@ -21,3 +21,6 @@ license-files = ["LICEN[CS]E*"]
 [project.urls]
 Homepage = "https://github.com/pypa/sampleproject"
 Issues = "https://github.com/pypa/sampleproject/issues"
+
+[tool.hatch.version]
+source = "vcs"
